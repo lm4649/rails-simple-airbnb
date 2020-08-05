@@ -1,0 +1,18 @@
+<%= form_for @flat do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br><br>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<br><br>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<br><br>
+<%= f.label :number_of_guests %>
+<%= f.number_field :number_of_guests %>
+<br><br>
+<%= f.label :price_per_night %>
+<%= f.number_field :price_per_night %>
+<br><br>
+<%= f.submit style: 'background-color: #A9F; padding: 4px 8px; border-radius: 4px' %>
+<% end %>

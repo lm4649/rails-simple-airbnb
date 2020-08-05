@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>All our Flats (<%= @flats.count %>)</h1>
+  <div class="col" style = "display: flex; justify-content: space-around;">
+    <% @flats.each do |flat| %>
+    <div class="card" style=" margin: 2px; border-radius: 4px; box-shadow: 4px 4px 8px rgba(0,0,0,0.2)">
+      <div style = 'background-color:#EEE; padding: 4px'>
+        <h3><%= flat.name %></h3>
+        <p><small><%=flat.address %></small></p>
+        <span>👯️ <%= flat.number_of_guests %></span>
+        <span>€ <%= flat.price_per_night %></span>
+      </div>
+      <br>
+      <div style='text-align: center;'>
+        <%= link_to 'More info', flat_path(flat), style: 'color:#0A7CFC; text-decoration: none ' %>
+        <span style='opacity: 0'> /// </span>
+        <%= link_to 'Edit', edit_flat_path(flat), style: 'color:#FFC034; text-decoration: none ' %>
+        <span style='opacity: 0'> /// </span>
+        <%= link_to 'Remove', flat_path(flat), method: :delete, data: {confirm: 'Are you sure?'}, style: 'color:#E1404B; text-decoration: none' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

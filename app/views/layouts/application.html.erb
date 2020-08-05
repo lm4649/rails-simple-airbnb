@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <nav style = "background-color: #DDD; height: 50px; display: flex; justify-content: space-between; align-items: center; padding: 4px">
+      <%= link_to "Simple AirBnB", flats_path, style: "text-decoration: none; color: grey; font-weight: bold " %>
+      <%= link_to "add a Flat", new_flat_path, style: "text-decoration: none; color: grey" %>
+    </nav>
     <%= yield %>
   </body>
 </html>
